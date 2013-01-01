@@ -1,0 +1,16 @@
+<div class="container">
+  <div id="alert"></div>
+  <h3>Check List</h3>
+  
+  <%= link_to "New Task", new_task_path, id: "new_link", remote: true %>
+  
+  <h4>Incomplete Tasks</h2>
+  <div class="tasks" id="incomplete_tasks">
+    <%= render @incomplete_tasks %>
+  </div>
+  
+  <h4>Comlpete Tasks</h2>
+  <div class="tasks" id="complete_tasks">
+    <%= render @complete_tasks %>
+  </div>
+</div>

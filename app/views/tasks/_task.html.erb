@@ -1,0 +1,10 @@
+<%= form_for(task, remote: true ) do |f| %>
+<table class="table table-striped" >
+<tr>
+  <td width="50"><%= f.check_box :complete %></td>
+  <td width="50"><%= f.submit("Update", :class => "btn btn-link")%></td>
+  <td width="100"><%= f.label :complete, task.name %></td>
+  <td width="100"><%= link_to "(remove)", task, method: :delete, data: {confirm: "Are you sure?"}, remote: true %> <i class="icon-trash"></i></td>
+</tr>
+</table>
+<% end %>

@@ -1,0 +1,5 @@
+$('#new_task').remove();
+$('#new_link').show();
+$('#incomplete_tasks').append('<%= j render(@task) %>');
+$('#alert').addClass("alert alert-success").show().html("Successfully created!!!!").fadeOut(5000);
+$('#edit_task_<%= @task.id %>').submitOnCheck();
